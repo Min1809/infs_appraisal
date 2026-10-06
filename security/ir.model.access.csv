@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_appraisal_template_user,appraisal.template.user,model_appraisal_template,base.group_user,1,0,0,0
+access_appraisal_template_officer,appraisal.template.officer,model_appraisal_template,hr_appraisal.group_hr_appraisal_user,1,1,1,0
+access_appraisal_template_manager,appraisal.template.manager,model_appraisal_template,hr_appraisal.group_hr_appraisal_manager,1,1,1,1
+access_appraisal_template_system,appraisal.template.system,model_appraisal_template,base.group_system,1,1,1,1

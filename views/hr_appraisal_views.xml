@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Inherit Appraisal Form View to show Template -->
+    <record id="view_hr_appraisal_form_inherit_infs_appraisal" model="ir.ui.view">
+        <field name="name">hr.appraisal.form.inherit.infs.appraisal</field>
+        <field name="model">hr.appraisal</field>
+        <field name="inherit_id" ref="hr_appraisal.view_hr_appraisal_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='department_id']" position="after">
+                <field name="appraisal_template_id"
+                    options="{'no_create_edit': True}"
+                    readonly="state in ['done', 'cancel']"
+                    placeholder="Appraisal Template"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Inherit Appraisal Tree View to display Template column -->
+    <record id="view_hr_appraisal_tree_inherit_infs_appraisal" model="ir.ui.view">
+        <field name="name">hr.appraisal.tree.inherit.infs.appraisal</field>
+        <field name="model">hr.appraisal</field>
+        <field name="inherit_id" ref="hr_appraisal.view_hr_appraisal_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='assessment_note']" position="after">
+                <field name="appraisal_template_id" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Inherit Appraisal Search View to filter/group by Template -->
+    <record id="hr_appraisal_search_inherit_infs_appraisal" model="ir.ui.view">
+        <field name="name">hr.appraisal.search.inherit.infs.appraisal</field>
+        <field name="model">hr.appraisal</field>
+        <field name="inherit_id" ref="hr_appraisal.hr_appraisal_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='employee_id']" position="after">
+                <field name="appraisal_template_id"/>
+            </xpath>
+            <xpath expr="//filter[@name='groupby_state']" position="after">
+                <filter string="Appraisal Template" name="groupby_template" domain="[]" context="{'group_by': 'appraisal_template_id'}"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

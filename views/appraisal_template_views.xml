@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Appraisal Template Tree View -->
+    <record id="appraisal_template_view_tree" model="ir.ui.view">
+        <field name="name">appraisal.template.tree</field>
+        <field name="model">appraisal.template</field>
+        <field name="arch" type="xml">
+            <tree string="Appraisal Templates">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="department_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="active" widget="boolean_toggle"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Appraisal Template Form View -->
+    <record id="appraisal_template_view_form" model="ir.ui.view">
+        <field name="name">appraisal.template.form</field>
+        <field name="model">appraisal.template</field>
+        <field name="arch" type="xml">
+            <form string="Appraisal Template">
+                <sheet>
+                    <widget name="web_ribbon" title="Archived" bg_color="text-bg-danger" invisible="active"/>
+                    <div class="oe_title">
+                        <label for="name" string="Template Name"/>
+                        <h1>
+                            <field name="name" placeholder="e.g. Sales Manager Appraisal Form"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group name="left_details">
+                            <field name="department_id" options="{'no_create_edit': True}"/>
+                            <field name="company_id" groups="base.group_multi_company" options="{'no_create_edit': True}"/>
+                        </group>
+                        <group name="right_details">
+                            <field name="sequence"/>
+                            <field name="active" invisible="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Employee Form Template" name="employee_template">
+                            <field name="template" placeholder="Enter self-assessment questions, evaluation criteria, and review sections for the employee..."/>
+                        </page>
+                        <page string="Manager Form Template" name="manager_template">
+                            <field name="manager_feedback_template" placeholder="Enter review guidelines and evaluation criteria for managers..."/>
+                        </page>
+                        <page string="Description / Notes" name="description">
+                            <field name="description" placeholder="Internal guidance regarding when and how this template should be used..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Appraisal Template Search View -->
+    <record id="appraisal_template_view_search" model="ir.ui.view">
+        <field name="name">appraisal.template.search</field>
+        <field name="model">appraisal.template</field>
+        <field name="arch" type="xml">
+            <search string="Search Appraisal Templates">
+                <field name="name" string="Template Name"/>
+                <field name="department_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <separator/>
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+                <group expand="0" string="Group By">
+                    <filter string="Department" name="group_by_department" domain="[]" context="{'group_by': 'department_id'}"/>
+                    <filter string="Company" name="group_by_company" domain="[]" context="{'group_by': 'company_id'}" groups="base.group_multi_company"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Window Action -->
+    <record id="action_appraisal_template" model="ir.actions.act_window">
+        <field name="name">Appraisal Templates</field>
+        <field name="res_model">appraisal.template</field>
+        <field name="view_mode">tree,form</field>
+        <field name="search_view_id" ref="appraisal_template_view_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new Appraisal Template
+            </p>
+            <p>
+                Define tailored appraisal review templates for different roles or departments (e.g., Sales Manager, Design Intern) to link to employee contracts.
+            </p>
+        </field>
+    </record>
+
+    <!-- Menu Item in Appraisals Configuration -->
+    <menuitem
+        id="menu_appraisal_template"
+        name="Appraisal Templates"
+        parent="hr_appraisal.menu_hr_appraisal_configuration"
+        action="action_appraisal_template"
+        sequence="20"
+        groups="hr_appraisal.group_hr_appraisal_manager"/>
+</odoo>

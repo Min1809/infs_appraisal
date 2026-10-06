@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <!-- Sales Manager Appraisal Template -->
+        <record id="appraisal_template_sales_manager" model="appraisal.template">
+            <field name="name">Sales Manager Appraisal Form</field>
+            <field name="sequence">10</field>
+            <field name="description">Comprehensive appraisal review form tailored for Sales Managers, focusing on quota attainment, pipeline health, leadership, and customer relationships.</field>
+            <field name="template"><![CDATA[
+<h2>Sales Manager Performance & Self-Assessment</h2>
+<p><strong>Period Review & Goal Evaluation</strong></p>
+
+<h3>1. Revenue & Quota Attainment</h3>
+<ul>
+    <li>What percentage of your sales target was achieved during this evaluation cycle?</li>
+    <li>Which key enterprise deals or market segments contributed most to your team's performance?</li>
+    <li>What challenges or market conditions impacted pipeline conversion rates?</li>
+</ul>
+
+<h3>2. Sales Strategy & Pipeline Leadership</h3>
+<ul>
+    <li>How effectively did you manage pipeline hygiene, forecasting accuracy, and lead progression?</li>
+    <li>What new sales initiatives, pitch improvements, or account expansion strategies did you introduce?</li>
+</ul>
+
+<h3>3. Team Mentorship & People Development</h3>
+<ul>
+    <li>How did you support underperforming account executives and nurture top sales talent?</li>
+    <li>What coaching, objection handling, or negotiation workshops did you conduct for your team?</li>
+</ul>
+
+<h3>4. Goals & Action Plan for Next Period</h3>
+<ul>
+    <li>Top 3 commercial goals and target revenue numbers for the upcoming cycle:</li>
+    <li>Strategic skills, market certifications, or executive training required:</li>
+</ul>
+]]></field>
+            <field name="manager_feedback_template"><![CDATA[
+<h2>Manager Evaluation: Sales Manager</h2>
+<p><strong>Executive Review & Leadership Assessment</strong></p>
+
+<h3>1. Quantitative Performance Assessment</h3>
+<p>Evaluation of sales quota attainment, revenue growth, churn prevention, and forecast reliability.</p>
+
+<h3>2. Strategic & Operational Execution</h3>
+<p>Feedback on leadership presence, cross-functional collaboration (with Marketing & Product), and process discipline.</p>
+
+<h3>3. Summary Rating & Next Period Target Agreement</h3>
+<p>Overall strengths, growth areas, and agreed compensation / KPI milestone incentives.</p>
+]]></field>
+        </record>
+
+        <!-- Design Intern Appraisal Template -->
+        <record id="appraisal_template_design_intern" model="appraisal.template">
+            <field name="name">Design Intern Appraisal Form</field>
+            <field name="sequence">20</field>
+            <field name="description">Appraisal form designed for Design Interns and Junior Designers, focusing on craft skills, design system usage, learning agility, and feedback integration.</field>
+            <field name="template"><![CDATA[
+<h2>Design Intern Self-Assessment & Growth Review</h2>
+<p><strong>Internship Milestones & Learning Reflection</strong></p>
+
+<h3>1. Design Deliverables & Project Contributions</h3>
+<ul>
+    <li>What projects, UI components, wireframes, or marketing graphics did you deliver this period?</li>
+    <li>Which project are you most proud of and why?</li>
+</ul>
+
+<h3>2. Technical Skills & Tool Mastery</h3>
+<ul>
+    <li>How comfortable are you with Figma, Design Systems, Auto-Layout, and prototyping tools?</li>
+    <li>What design techniques or workflows did you learn during this internship?</li>
+</ul>
+
+<h3>3. Collaboration & Receiving Critique</h3>
+<ul>
+    <li>How well did you incorporate design feedback from senior designers and stakeholders?</li>
+    <li>How effectively did you collaborate with frontend developers and product managers?</li>
+</ul>
+
+<h3>4. Career Goals & Next Learning Focus</h3>
+<ul>
+    <li>What design domains (UI/UX research, motion design, design systems, visual branding) do you want to explore next?</li>
+    <li>What support or mentorship would help you transition into a full-time design role?</li>
+</ul>
+]]></field>
+            <field name="manager_feedback_template"><![CDATA[
+<h2>Mentor / Lead Review: Design Intern</h2>
+<p><strong>Skill Development & Performance Appraisal</strong></p>
+
+<h3>1. Quality of Craft & Attention to Detail</h3>
+<p>Assessment of visual hierarchy, component consistency, design handoff quality, and speed of delivery.</p>
+
+<h3>2. Learning Agility & Initiative</h3>
+<p>Feedback on curiosity, problem-solving independence, and responsiveness to critique.</p>
+
+<h3>3. Recommendation & Next Steps</h3>
+<p>Recommendation regarding internship completion, extension, or full-time offer readiness.</p>
+]]></field>
+        </record>
+
+        <!-- General Employee Appraisal Template -->
+        <record id="appraisal_template_general" model="appraisal.template">
+            <field name="name">Standard Employee Appraisal Form</field>
+            <field name="sequence">30</field>
+            <field name="description">General appraisal template suitable for standard employee quarterly or annual reviews.</field>
+            <field name="template"><![CDATA[
+<h2>Employee Self-Assessment & Performance Review</h2>
+
+<h3>1. Key Deliverables & Achievements</h3>
+<ul>
+    <li>What were your principal achievements and completed goals during this evaluation period?</li>
+    <li>What obstacles did you encounter, and how did you resolve them?</li>
+</ul>
+
+<h3>2. Core Competencies & Quality of Work</h3>
+<ul>
+    <li>How do you assess your quality of work, timeliness, and problem-solving effectiveness?</li>
+    <li>How did you demonstrate teamwork and positive communication across departments?</li>
+</ul>
+
+<h3>3. Development & Future Objectives</h3>
+<ul>
+    <li>What are your top professional development priorities for the next cycle?</li>
+    <li>What skills, tools, or resources do you need from the company to succeed?</li>
+</ul>
+]]></field>
+            <field name="manager_feedback_template"><![CDATA[
+<h2>Manager Review & Feedback</h2>
+
+<h3>1. Performance Against Objectives</h3>
+<p>Detailed assessment of milestone achievements and overall contribution to team goals.</p>
+
+<h3>2. Strengths & Areas for Improvement</h3>
+<p>Constructive feedback on key strengths and suggested developmental areas.</p>
+
+<h3>3. Development Plan & Goals Agreement</h3>
+<p>Agreed targets, milestones, and training plan for the upcoming period.</p>
+]]></field>
+        </record>
+    </data>
+</odoo>
