@@ -8,12 +8,12 @@
             <xpath expr="//app[@name='hr_appraisal']//block[1]" position="before">
                 <block title="Default Contract Appraisal Settings" help="Default template and review frequency applied when not configured on employee contracts">
                     <setting string="Default Appraisal Template" company_dependent="1" help="Fallback appraisal template used if an employee contract has no specific template selected.">
-                        <field name="default_appraisal_template_id" options="{'no_create_edit': True}"/>
+                        <field name="appraisal_template_id" options="{'no_create_edit': True}"/>
                     </setting>
                     <setting string="Default Appraisal Frequency" company_dependent="1" help="Default interval (in months) between employee appraisals if not configured on the contract.">
                         <div class="content-group">
                             <div class="d-flex align-items-center">
-                                <field name="default_appraisal_frequency" class="text-center" style="width: 10%; min-width: 4rem;"/>
+                                <field name="appraisal_frequency" class="text-center" style="width: 10%; min-width: 4rem;"/>
                                 <span class="ms-2">months</span>
                             </div>
                         </div>
