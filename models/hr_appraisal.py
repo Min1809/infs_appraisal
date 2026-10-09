@@ -13,6 +13,12 @@ class HrAppraisal(models.Model):
         tracking=True,
         help='Appraisal template loaded based on the employee contract or default company settings.'
     )
+    guide = fields.Html(
+        string='Guide',
+        related='appraisal_template_id.guide',
+        readonly=True,
+        help='Guidelines and instructions loaded from the appraisal template.'
+    )
 
     @api.depends('employee_id', 'employee_id.contract_id', 'company_id')
     def _compute_appraisal_template_id(self):

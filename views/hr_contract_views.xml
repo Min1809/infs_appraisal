@@ -10,6 +10,7 @@
                 <group name="appraisal_settings" string="Appraisal Settings">
                     <field name="appraisal_template_id"
                         options="{'no_create_edit': True}"
+                        domain="[('department_id', '=', department_id)] if department_id else []"
                         placeholder="Select appraisal template for this contract..."/>
                     <label for="frequency" string="Appraisal Frequency"/>
                     <div class="o_row">

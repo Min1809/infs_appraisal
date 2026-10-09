@@ -46,6 +46,9 @@
                         <page string="Manager Form Template" name="manager_template">
                             <field name="manager_feedback_template" placeholder="Enter review guidelines and evaluation criteria for managers..."/>
                         </page>
+                        <page string="Guide" name="guide">
+                            <field name="guide" placeholder="Enter guidelines, instructions, scoring criteria, and steps on how to fill this appraisal form..."/>
+                        </page>
                         <page string="Description / Notes" name="description">
                             <field name="description" placeholder="Internal guidance regarding when and how this template should be used..."/>
                         </page>

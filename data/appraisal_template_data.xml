@@ -48,6 +48,16 @@
 <h3>3. Summary Rating & Next Period Target Agreement</h3>
 <p>Overall strengths, growth areas, and agreed compensation / KPI milestone incentives.</p>
 ]]></field>
+            <field name="guide"><![CDATA[
+<h2>Sales Manager Appraisal Guidelines</h2>
+<p>Please follow these steps to prepare for your appraisal review:</p>
+<ol>
+    <li><strong>Data Preparation:</strong> Pull your CRM pipeline reports, quota attainment percentage, and team conversion metrics before completing the form.</li>
+    <li><strong>Self-Assessment:</strong> Provide objective, evidence-based responses under each section. Quantify achievements where possible (e.g. <em>"Exceeded Q3 revenue target by 18%"</em>).</li>
+    <li><strong>Publish Feedback:</strong> Once your self-assessment is written, toggle <em>"Visible to Manager"</em> to allow your executive reviewer to review prior to the 1-on-1 meeting.</li>
+    <li><strong>Review Meeting:</strong> Schedule a 60-minute review session with the VP of Sales to agree on next period targets and personal growth initiatives.</li>
+</ol>
+]]></field>
         </record>
 
         <!-- Design Intern Appraisal Template -->
@@ -96,6 +106,15 @@
 <h3>3. Recommendation & Next Steps</h3>
 <p>Recommendation regarding internship completion, extension, or full-time offer readiness.</p>
 ]]></field>
+            <field name="guide"><![CDATA[
+<h2>Design Internship Review Guidelines</h2>
+<p>Welcome to your internship review! Here is how to complete this form:</p>
+<ol>
+    <li><strong>Portfolio / Links:</strong> Gather links to Figma files, component libraries, or shipped features you worked on.</li>
+    <li><strong>Honest Reflection:</strong> Highlight both what you enjoyed and where you felt challenged. This helps your mentor adjust your learning path.</li>
+    <li><strong>Next Steps:</strong> Discuss your career aspirations and whether you are interested in a full-time position or extending the internship.</li>
+</ol>
+]]></field>
         </record>
 
         <!-- General Employee Appraisal Template -->
@@ -135,6 +154,15 @@
 
 <h3>3. Development Plan & Goals Agreement</h3>
 <p>Agreed targets, milestones, and training plan for the upcoming period.</p>
+]]></field>
+            <field name="guide"><![CDATA[
+<h2>General Appraisal Guidelines</h2>
+<p>How to complete your annual/quarterly review:</p>
+<ul>
+    <li><strong>Be Specific:</strong> Reference tangible milestones, deliverables, and projects completed during the period.</li>
+    <li><strong>Open Communication:</strong> Share your thoughts on team dynamics, workload, and company support.</li>
+    <li><strong>Growth Mindset:</strong> Focus on continuous learning and professional goals for the next cycle.</li>
+</ul>
 ]]></field>
         </record>
     </data>

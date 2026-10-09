@@ -25,3 +25,8 @@ class HrContract(models.Model):
         for contract in self:
             if contract.frequency and contract.frequency < 0:
                 raise ValidationError(_("Appraisal frequency cannot be a negative number."))
+
+    @api.onchange('department_id')
+    def _onchange_department_id_appraisal_template(self):
+        if self.department_id and self.appraisal_template_id and self.appraisal_template_id.department_id and self.appraisal_template_id.department_id != self.department_id:
+            self.appraisal_template_id = False

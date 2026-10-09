@@ -25,6 +25,11 @@ class AppraisalTemplate(models.Model):
         translate=True,
         help='Optional template content specifically for manager evaluation and feedback.'
     )
+    guide = fields.Html(
+        string='Guide / Instructions',
+        translate=True,
+        help='Guidelines, instructions, and scoring criteria on how to fill out this appraisal form.'
+    )
     company_id = fields.Many2one(
         'res.company',
         string='Company',

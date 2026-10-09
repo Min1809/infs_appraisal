@@ -12,6 +12,15 @@
                     readonly="state in ['done', 'cancel']"
                     placeholder="Appraisal Template"/>
             </xpath>
+            <xpath expr="//notebook//page[@name='appraisal']" position="after">
+                <page string="Guide" name="guide" invisible="not guide">
+                    <div class="alert alert-info d-flex align-items-center mb-3" role="status">
+                        <i class="fa fa-info-circle fa-lg me-2"/>
+                        <span>These instructions and guidelines are provided by the assigned appraisal template to assist in completing this form.</span>
+                    </div>
+                    <field name="guide" readonly="1" class="w-100"/>
+                </page>
+            </xpath>
         </field>
     </record>
 
